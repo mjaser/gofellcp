@@ -1,0 +1,19 @@
+Package: gofellcp
+Type: Package
+Title: Goodness-of-fit Tests for Elliptical Copulas
+Version: 0.0.0.9000
+Authors@R: c(
+    person("Miriam", "Jaser",, "miriam.jaser@tum.de", role = c("cre", "aut")), 
+    person("Stephan", "Haug",, "haug@tum.de", role = "aut"))
+Description: Provides simple non-parametric goodness-of-fit tests for
+    multivariate elliptical copulas for known and unknown margins.
+    Moreover, provides simple non-parametric tests for symmetry and
+    radial symmetry of bivariate copulas.
+License: GPL (>= 3)
+Encoding: UTF-8
+LazyData: true
+URL: https://github.com/mjaser/gofellcp
+BugReports: https://github.com/mjaser/gofellcp/issues
+Imports: 
+    copula,
+    stats
