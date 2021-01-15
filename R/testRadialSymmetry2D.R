@@ -34,8 +34,8 @@ testRadialSymmetry2D <- function(w, method) {
 
   if (method == "mixt") {
 
-    ind1 <- stats::rbinom(nn, 1, 0.5)
-    ind2 <- stats::rbinom(nn, 1, 0.5)
+    ind1 <- rbinom(nn, 1, 0.5)
+    ind2 <- rbinom(nn, 1, 0.5)
 
     w1[ind1 == 0, ] <- 1 - w1[ind1 == 0, ]
     w2[ind2 == 0, ] <- 1 - w2[ind2 == 0, ]
@@ -93,12 +93,12 @@ testRadialSymmetry2D <- function(w, method) {
 
   # Method: mixture
   if (method == "mixt") {
-    sigma <- sqrt(2 * stats::var(2 * h1))
+    sigma <- sqrt(2 * var(2 * h1))
   }
 
   # Method: reflection
   if (method == "refl") {
-    sigma <- sqrt(2 * (stats::var(h1) + stats::var(h1r) + 2 * stats::cov(h1, h1r)))
+    sigma <- sqrt(2 * (var(h1) + var(h1r) + 2 * cov(h1, h1r)))
   }
 
 

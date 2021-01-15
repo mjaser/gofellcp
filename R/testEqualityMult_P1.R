@@ -59,7 +59,7 @@ testEqualityMult <- function(z) {
     hatBeta <- mean(sign(U - 0.5) * sign(V - 0.5))
 
     # Estimate Kendall's tau
-    hatTau <- stats::cor(x=U, y=V, method="kendall")
+    hatTau <- cor(x=U, y=V, method="kendall")
 
     # Compute the difference for this pair of coordinates
     D[i] <- hatBeta - hatTau
@@ -94,7 +94,7 @@ testEqualityMult <- function(z) {
   stat <- n * t(D) %*% solve(hatV)  %*% (D)
 
   # Compute the p-value
-  pval <- 1 - stats::pchisq(stat, df=dd)
+  pval <- 1 - pchisq(stat, df=dd)
 
   # Store the values in the list for the output
   out$statistic <- stat

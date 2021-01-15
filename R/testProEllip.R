@@ -296,17 +296,17 @@ testProEllip <- function(u, alpha) {
 
   # Test for symmetry
   test_stat_sym <-  testSymmetry2D(u)$statistic
-  p_sym  <- stats::pnorm(- abs(test_stat_sym)) + (1 - stats::pnorm(abs(test_stat_sym))) #1 - pchisq(test_stat^2, df=1)
+  p_sym  <- pnorm(- abs(test_stat_sym)) + (1 - pnorm(abs(test_stat_sym))) #1 - pchisq(test_stat^2, df=1)
   reject_sym <- as.numeric(p_sym < alpha/3)
 
   # Test for radial symmetry
   test_stat_radsym <-  testRadialSymmetry2D(u)$statistic
-  p_radsym  <- stats::pnorm(- abs(test_stat_radsym)) + (1 - stats::pnorm(abs(test_stat_radsym)))
+  p_radsym  <- pnorm(- abs(test_stat_radsym)) + (1 - pnorm(abs(test_stat_radsym)))
   reject_radsym <- as.numeric(p_radsym < alpha/3)
 
   # Test for equality
   test_stat_equal <-  testEquality2D(u)$statistic
-  p_equal  <- stats::pnorm(- abs(test_stat_equal)) + (1 - stats::pnorm(abs(test_stat_equal)))
+  p_equal  <- pnorm(- abs(test_stat_equal)) + (1 - pnorm(abs(test_stat_equal)))
   reject_equal <- as.numeric(p_equal < alpha/3)
 
   # Testing procedure for ellipticity using Bonferroni

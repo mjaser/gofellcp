@@ -1,5 +1,4 @@
 
-
 compD <- function(w) {
 
   # Computes the statistic D_n (vector of beta-tau for all pairs of coordinates)

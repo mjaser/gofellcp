@@ -34,8 +34,8 @@ testSymmetry2D <- function(w, method) {
 
   if (method == "mixt") {
 
-    ind1 <- stats::rbinom(nn, 1, 0.5)
-    ind2 <- stats::rbinom(nn, 1, 0.5)
+    ind1 <- rbinom(nn, 1, 0.5)
+    ind2 <- rbinom(nn, 1, 0.5)
 
     w1[ind1 == 0, ] <- w1[ind1 == 0, 2:1]
     w2[ind2 == 0, ] <- w2[ind2 == 0, 2:1]
@@ -77,7 +77,7 @@ testSymmetry2D <- function(w, method) {
 
   # Compute the standard deviation of the test statistic
   # sigma does not depend on the method
-  sigma <- sqrt(2 * stats::var(2 * h1))
+  sigma <- sqrt(2 * var(2 * h1))
 
 
   # Compute the transformed test statistic

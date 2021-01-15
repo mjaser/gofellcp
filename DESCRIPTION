@@ -17,3 +17,4 @@ BugReports: https://github.com/mjaser/gofellcp/issues
 Imports: 
     copula,
     stats
+RoxygenNote: 7.1.1
