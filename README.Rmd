@@ -1,0 +1,37 @@
+---
+output: github_document
+---
+
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  out.width = "100%"
+)
+```
+
+# gofellcp 
+**(gof &sdot; ell &sdot; c &sdot; p)**
+
+<!-- badges: start -->
+[![Lifecycle: experimental](https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg)](https://lifecycle.r-lib.org/articles/stages.html)
+<!-- badges: end -->
+
+The R package *gofellcp* provides a collection of functions, which implement
+the tests proposed in
+
+- Jaser, M., Min, A.: On tests for symmetry and radial symmetry of bivariate copulas towards testing for ellipticity. *Computational Statistics* , 2020.
+
+- Jaser, M., Haug, S., Min, A.: A simple non-parametric goodness-of-fit test for elliptical copulas. *Dependence Modeling* (5), 2017.
+
+
+## Installation
+
+You can install the package from
+[GitHub](https://github.com/mjaser/gofellcp)
+
+```{r gh-installation, eval = FALSE}
+# install.packages("remotes")
+remotes::install_github("mjaser/gofellcp")
+```
+
